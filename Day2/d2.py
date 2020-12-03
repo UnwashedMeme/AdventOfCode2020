@@ -35,6 +35,9 @@ def readinput():
         return f.readlines()
 
 
-def countgood(p):
-    lines = readinput()
-    return sum(1 for l in lines if p(l))
+def countif(predicate, iterable):
+    return sum(1 for item in iterable if predicate(item))
+
+
+def countgood(policy):
+    return countif(policy, readinput())
