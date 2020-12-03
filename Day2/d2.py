@@ -23,4 +23,4 @@ def readinput():
 
 def countgood(p):
     lines = readinput()
-    return len([l for l in lines if p(l)])
+    return sum(1 for l in lines if p(l))
